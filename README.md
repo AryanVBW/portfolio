@@ -17,7 +17,6 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 </div>
 <p align="center">
 <br/>
-  # My Portfolio
 
 Welcome to my portfolio! I'm a passionate 1st-year student at Newton School of Technology, currently pursuing a Bachelor's in Data Science and Applied Machine Learning at IIT Madras (via the Perseverance program).
 
