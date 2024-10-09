@@ -18,7 +18,11 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 <p align="center">
 <br/>
 
-Welcome to my portfolio! I'm a passionate 1st-year student at Newton School of Technology, currently pursuing a Bachelor's in Data Science and Applied Machine Learning at IIT Madras (via the Perseverance program).
+
+
+## Welcome to My Portfolio!
+
+I'm a passionate 1st-year student at Newton School of Technology, currently pursuing a Bachelor's in Data Science and Applied Machine Learning at IIT Madras (via the Perseverance program).
 
 This portfolio showcases my skills in web development, particularly using HTML, CSS, and JavaScript. I'm excited to share my journey of learning and growth with you.
 
@@ -28,9 +32,9 @@ This repository hosts the code for my static website portfolio built using GitHu
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
+- **HTML**
+- **CSS**
+- **JavaScript**
 
 ## Features
 
@@ -44,11 +48,59 @@ This repository hosts the code for my static website portfolio built using GitHu
 2. Navigate to the project directory
 3. Open `index.html` in your web browser.
 
-## Future Plans
+## HTML Tags Used
 
-I'm constantly learning and improving my skills. I plan to add more projects to this portfolio as I progress in my studies. 
+Here are all the tags used in the HTML document along with their full names:
 
-## Get in Touch
+1. `<html>` - HTML Document Root
+2. `<head>` - Document Metadata Container
+3. `<meta>` - Metadata Element
+</ul>4. `<title>` - Document Title
+5. `<link>` - External Resource Link
+6. `<body>` - Document Body
+7. `<audio>` - Audio Element
+8. `<source>` - Media Source
+9. `<div>` - Division or Section
+10. `<noscript>` - Fallback Content for No Script
+11. `<header>` - Header Section
+12. `<ul>` - Unordered List
+13. `<li>` - List Item
+14. `<a>` - Anchor (Hyperlink)
+15. `<button>` - Button
+16. `<span>` - Inline Container
+17. `<input>` - Input Field
+18. `<label>` - Label for Form Elements
+19. `<main>` - Main Content
+20. `<section>` - Section
+21. `<article>` - Article
+22. `<p>` - Paragraph
+23. `<h2>` - Heading Level 2
+24. `<h3>` - Heading Level 3
+25. `<img>` - Image
+26. `<svg>` - Scalable Vector Graphics
+27. `<path>` - SVG Path
+28. `<polyline>` - SVG Polyline
+29. `<footer>` - Footer Section
+30. `<script>` - Script
+
+These tags are used to structure and style your HTML document.
+
+## JavaScript Functions
+
+### hamburgerMenu()
+
+**Purpose:** This function toggles the visibility of the mobile navigation menu when the hamburger button is clicked.
+
+**How it works:** It adds or removes a CSS class (e.g., visible) to the mobile menu element (id="mobiletogglemenu"), which controls whether the menu is shown or hidden.
+
+### hidemenubyli()
+
+**Purpose:** This function hides the mobile navigation menu when a menu item is clicked.
+
+**How it works:** It removes the CSS class (e.g., visible) from the mobile menu element (id="mobiletogglemenu"), ensuring the menu is hidden.
+
+### Example JavaScript Code
+
 
 I'm always open to connecting with fellow learners and developers. Feel free to reach out to me via email or LinkedIn.
 
