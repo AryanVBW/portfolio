@@ -52,37 +52,47 @@ This repository hosts the code for my static website portfolio built using GitHu
 
 Here are all the tags used in the HTML document along with their full names:
 
-1. `<html>` - HTML Document Root
-2. `<head>` - Document Metadata Container
-3. `<meta>` - Metadata Element
-</ul>4. `<title>` - Document Title
-5. `<link>` - External Resource Link
-6. `<body>` - Document Body
-7. `<audio>` - Audio Element
-8. `<source>` - Media Source
-9. `<div>` - Division or Section
-10. `<noscript>` - Fallback Content for No Script
-11. `<header>` - Header Section
-12. `<ul>` - Unordered List
-13. `<li>` - List Item
-14. `<a>` - Anchor (Hyperlink)
-15. `<button>` - Button
-16. `<span>` - Inline Container
-17. `<input>` - Input Field
-18. `<label>` - Label for Form Elements
-19. `<main>` - Main Content
-20. `<section>` - Section
-21. `<article>` - Article
-22. `<p>` - Paragraph
-23. `<h2>` - Heading Level 2
-24. `<h3>` - Heading Level 3
-25. `<img>` - Image
-26. `<svg>` - Scalable Vector Graphics
-27. `<path>` - SVG Path
-28. `<polyline>` - SVG Polyline
-29. `<footer>` - Footer Section
-30. `<script>` - Script
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Elements</title>
+</head>
+<body>
+  <h1>HTML Elements</h1>
+  <ul>
+    <li>&lt;html&gt; - HTML Document Root</li>
+    <li>&lt;head&gt; - Document Metadata Container</li>
+    <li>&lt;meta&gt; - Metadata Element</li>
+    <li>&lt;title&gt; - Document Title</li>
+    <li>&lt;link&gt; - External Resource Link</li>
+    <li>&lt;body&gt; - Document Body</li>
+    <li>&lt;audio&gt; - Audio Element</li>
+    <li>&lt;source&gt; - Media Source</li>
+    <li>&lt;div&gt; - Division or Section</li>
+    <li>&lt;noscript&gt; - Fallback Content for No Script</li>
+    <li>&lt;header&gt; - Header Section</li>
+    <li>&lt;ul&gt; - Unordered List</li>
+    <li>&lt;li&gt; - List Item</li>
+    <li>&lt;a&gt; - Anchor (Hyperlink)</li>
+    <li>&lt;button&gt; - Button</li>
+    <li>&lt;span&gt; - Inline Container</li>
+    <li>&lt;input&gt; - Input Field</li>
+    <li>&lt;label&gt; - Label for Form Elements</li>
+    <li>&lt;main&gt; - Main Content</li>
+    <li>&lt;section&gt; - Section</li>
+    <li>&lt;article&gt; - Article</li>
+    <li>&lt;p&gt; - Paragraph</li>
+    <li>&lt;h2&gt; - Heading Level 2</li>
+    <li>&lt;h3&gt; - Heading Level 3</li>
+    <li>&lt;img&gt; - Image</li>
+    <li>&lt;svg&gt; - Scalable Vector Graphics</li>
+    <li>&lt;path&gt; - SVG Path</li>
+    <li>&lt;polyline&gt; - SVG Polyline</li>
+    <li>&lt;footer&gt; - Footer Section</li>
+    <li>&lt;script&gt; - Script</li>
+  </ul>
+</body>
+</html>
 These tags are used to structure and style your HTML document.
 
 ## JavaScript Functions
