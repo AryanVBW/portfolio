@@ -48,14 +48,12 @@ This repository hosts the code for my static website portfolio built using GitHu
 2. Navigate to the project directory
 3. Open `index.html` in your web browser.
 
-## HTML Tags Used
 
-Here are all the tags used in the HTML document along with their full names:
+
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HTML Elements</title>
 </head>
 <body>
   <h1>HTML Elements</h1>
