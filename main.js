@@ -4,3 +4,26 @@ function openURL() {
   const pdfPath = window.location.origin + '/src/pdf/vivek-resume.pdf';
   window.open(pdfPath, '_blank');
 }
+
+// Scroll Animation Observer
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Optional: Stop observing after animation
+      // observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Start observing all elements with scroll-animate class
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedElements = document.querySelectorAll('.scroll-animate');
+  animatedElements.forEach(element => observer.observe(element));
+});
