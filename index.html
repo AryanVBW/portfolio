@@ -27,32 +27,18 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="vivek w | Portfolio" />
   <meta name="twitter:description"
-  content="Hi! My name is vivek. I'm a web developer and digital visual artist. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and engaging interactions." />
+  content="Hi! My name is vivek. I'm a web developer and digital visual artist. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
   <title>Vivek W | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
-  
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/AryanVBW/portfolio/main/aos.css" />
- 
+  <!-- aos cdn -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="voice-assistant.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- google fonts-->
   <link rel="stylesheet"
-    href="https://raw.githubusercontent.com/AryanVBW/portfolio/main/css2.css" />
+    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
 
 <body class="body">
-  <div class="boot-animation">
-    <div class="boot-grid"></div>
-    <div class="boot-scanline"></div>
-    <div class="boot-logo"></div>
-    <div class="boot-particles">
-      <!-- Particles will be added dynamically via JavaScript -->
-    </div>
-    <div class="boot-content">
-      <div class="boot-text">Initializing System...</div>
-      <div class="boot-progress"></div>
-    </div>
-    <div class="boot-status">Loading core modules...</div>
-  </div>
   <audio loop="" id="audioPlayer" style="display: none">
     <source src="src/mp3/preloader.mp3" type="audio/mp3" />
   </audio>
@@ -91,19 +77,19 @@
           </li>
 
           <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
-            <a href="projects.html" tabindex="0" aria-label="Projects menu button">
+            <a href="#projects" aria-label="projects menu button">
               &#60;/Projects&#62;
             </a>
           </li>
         </ul>
       </div>
-  
+      <!-- navbar tabs ends -->
     </div>
   </header>
- 
+  <!-- header ends here -->
 
   <main>
-  
+    <!-- hamburger -->
     <div class="hamburger" id="hamburger" data-aos="fade">
       <div class="hamburgerbase">
         <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
@@ -113,7 +99,7 @@
         </button>
       </div>
     </div>
-   
+    <!-- hamburger -->
     <div class="mobiletogglemenu" id="mobiletogglemenu">
       <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
         <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
@@ -133,12 +119,13 @@
           </a>
         </li>
         <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
-          <a href="projects.html" tabindex="0" aria-label="projects menu button">
+          <a href="#projects" tabindex="0" aria-label="projects menu button">
             &#60;/Projects&#62;
           </a>
         </li>
       </ul>
     </div>
+    <!-- mobile toggle menu ends -->
 
     <section class="landing-page-container" id="home">
       <div class="blob"></div>
@@ -162,23 +149,37 @@
           <p class="jello">.</p>
         </article>
 
-        <article id="work">
+        <article id="work" data-aos="fade-up" data-aos-delay="400">
           <div>
-            <p class="scroll-animate from-right scroll-delay-1">I</p>
+            <p class="jello">I</p>
           </div>
           <div>
-            <p class="scroll-animate from-right scroll-delay-2">code</p>
+            <p class="jello">c</p>
+            <p class="jello">o</p>
+            <p class="jello">d</p>
+            <p class="jello">e</p>
           </div>
           <div>
-            <p class="scroll-animate from-right scroll-delay-3">with</p>
+            <p class="jello">w</p>
+            <p class="jello">i</p>
+            <p class="jello">t</p>
+            <p class="jello">h</p>
           </div>
           <div>
-            <p class="scroll-animate from-right scroll-delay-4">precision</p>
+            <p class="jello">p</p>
+            <p class="jello">r</p>
+            <p class="jello">e</p>
+            <p class="jello">c</p>
+            <p class="jello">i</p>
+            <p class="jello">s</p>
+            <p class="jello">i</p>
+            <p class="jello">o</p>
+            <p class="jello">n</p>
+
           </div>
         </article>
-
-        <p id="info-para" class="scroll-animate scroll-delay-3">
-          I'm a passionate developer and technology geek with a flair for digital concept art and frontend designs. I thrive on simple content structures, clean design patterns, and engaging interactions<br />
+        <p id="info-para" data-aos="fade-up" data-aos-delay="600">
+          I’m a passionate developer and technology geek with a flair for digital concept art and frontend designs. I thrive on simple content structures, clean design patterns, and engaging interactions<br />
           <br />
           My love for fun web UI, collaboration, and product creation is matched only by my knack for diving into challenges and hacking away at them, one line of code at a time I value simple content structure, clean design patterns, and
           thoughtful interactions.
@@ -207,13 +208,13 @@
                 class="needtobeinvert"></label>
             </div>
           </div>
-         
+          <!-- setting div ends -->
         </div>
-      
+        <!-- contact-btn-div -->
       </div>
      
     </section>
-
+    <!-- landing page ends here -->
     <section class="about-section-container" id="about" data-aos="fade-up">
       <div class="about-section">
         <div class="section-heading">
@@ -226,22 +227,22 @@
         <div class="info-dp-section">
           <div class="about-info">
             <p tabindex="0">
-              A Visionary in Code: Unleashing Digital Potential"
+              A Visionary in Code: Unleashing Digital Potential”
 
-              My passion for technology transcends mere interest; it's a relentless drive that propels me forward. Initially drawn to the world of digital concept arts, I found my true calling in web development. The transition was not just a change in focus—it was a leap into a realm where creativity meets logic, resulting in a symphony of design and functionality.
+              My passion for technology transcends mere interest; it’s a relentless drive that propels me forward. Initially drawn to the world of digital concept arts, I found my true calling in web development. The transition was not just a change in focus—it was a leap into a realm where creativity meets logic, resulting in a symphony of design and functionality.
             </p>
             <br />
             <p tabindex="0">
-              Crafting the Web: A Canvas for Innovation"
+              Crafting the Web: A Canvas for Innovation”
 
-The web is my canvas, and my tools are the languages and frameworks that bring life to ideas. I revel in the process of building from scratch, of meticulously piecing together lines of code to construct interactive experiences and creative tools that resonate with users. It's a craft that demands both precision and imagination, and I dedicate myself to mastering it every day.
+The web is my canvas, and my tools are the languages and frameworks that bring life to ideas. I revel in the process of building from scratch, of meticulously piecing together lines of code to construct interactive experiences and creative tools that resonate with users. It’s a craft that demands both precision and imagination, and I dedicate myself to mastering it every day.
             </p>
             <br />
             <p tabindex="0">
            
             </p>
-           
-      <a href="src/pdf/vivek-resume.pdf" class="resume-btn" id="resume-btn" target="_blank" download="vivek-resume.pdf">
+             <!-- Resume button -->
+      <button class="resume-btn" id="resume-btn" onclick="openURL()">
         <div class="sign">
           <svg viewBox="0 0 640 512">
             <path
@@ -250,7 +251,7 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
         </div>
 
         <div class="text">Resume</div>
-      </a>
+      </button>
           </div>
 
           <div class="dp" data-aos="fade-up">
@@ -259,115 +260,92 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
         </div>
       </div>
     </section>
-  
+    <!-- about section ends  -->
 
     <section class="skills-section-container" id="skills">
       <div class="skills-section">
-        <div class="section-heading" data-aos="fade-up" data-aos-duration="600">
-          <h2 class="section-heading-article scroll-animate">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
             &#60;/Skills&#62;
           </h2>
+          <p class="sectionHeadingP"></p>
         </div>
 
         <div class="frontend-dev-section">
-          <h3 class="frontend-dev-heading scroll-animate scroll-delay-1" tabindex="0"
+          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
             aria-label="the skills i have in">
             Tech Stack
           </h3>
           <ul class="tech-stack-wrapper">
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
               <span class="tooltip">HTML</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
               <span class="tooltip">CSS</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
               <span class="tooltip">JS</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="350">
-              <img src="./src/png/typescript-logo.png" alt="TypeScript skill" class="tech-stack-logo" />
-              <span class="tooltip">TypeScript</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/nodejs-144.png" alt="node.js skill" class="tech-stack-logo" />
               <span class="tooltip">NODE.js</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="425">
-              <img src="./src/png/nextjs-icon-dark-background.png" alt="Nest.js skill" class="tech-stack-logo" />
-              <span class="tooltip">Nest.js</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="450">
-              <img src="./src/png/vue-logo.png" alt="Vue.js skill" class="tech-stack-logo" />
-              <span class="tooltip">Vue.js</span>
-            </li>
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="450">
-              <img src="./src/png/docker-mark-blue.png" alt="Vue.js skill" class="tech-stack-logo" />
-              <span class="tooltip">Docker</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/reactlogo.png" alt="react skill" class="tech-stack-logo" />
               <span class="tooltip">REACT</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="550">
-              <img src="./src/png/angular-logo.png" alt="Angular.js skill" class="tech-stack-logo" />
-              <span class="tooltip">Angular</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
               <span class="tooltip">GITHUB</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
               <span class="tooltip">GIT</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="800">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/bash-144.png" alt="Bash language skill" class="tech-stack-logo" />
               <span class="tooltip">Bash</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/cpplogo.png" alt="Python language skill" class="tech-stack-logo" />
               <span class="tooltip">PYTHON</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/java-144.png" alt="JAVA" class="tech-stack-logo" />
               <span class="tooltip">JAVA</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1100">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/php-96.png" alt="PHP skill" class="tech-stack-logo" />
               <span class="tooltip">PHP</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1200">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/ailogo.png" alt="adobe illustrator skill" class="tech-stack-logo" />
               <span class="tooltip">ADOBE AI</span>
             </li>
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1300">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/mysql.png" alt="MySQL illustrator skill" class="tech-stack-logo" />
               <span class="tooltip">MySQL</span>
             </li>
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1400">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/wordpress-144.png" alt="wordpress illustrator skill" class="tech-stack-logo" />
               <span class="tooltip">Wordpress</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1500">
+            <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/canvalogo.png" alt="canva skill" class="tech-stack-logo" />
               <span class="tooltip">CANVA</span>
             </li>
@@ -376,84 +354,67 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
       </div>
     </section>
     <div class="frontend-dev-section">
-      <h3 class="frontend-dev-heading scroll-animate scroll-delay-1" tabindex="0"
+      <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
         aria-label="Proficient with Diverse Operating Systems">
         Proficient with Diverse Operating Systems 
       </h3>
       <ul class="tech-stack-wrapper"> 
-        <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
+        <li class="tech-stack-box" data-aos="fade-up">
           <img src="./src/os/Kali.png" alt="Kali  skill" class="tech-stack-logo" />
           <span class="tooltip">Kali LINUX</span>
         </li>
-        <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
+        <li class="tech-stack-box" data-aos="fade-up">
           <img src="./src/os/garuda.png" alt="GARUDA OS skill" class="tech-stack-logo" />
           <span class="tooltip">GARUDA Linux</span>
         </li>
-        <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+        <li class="tech-stack-box" data-aos="fade-up">
           <img src="./src/os/Parrot.png" alt="parrot os skill" class="tech-stack-logo" />
           <span class="tooltip">Parrot OS</span>
         </li>
-        <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">
+        <li class="tech-stack-box" data-aos="fade-up">
           <img src="./src/os/debiBg.png" alt="Debian skill" class="tech-stack-logo" />
           <span class="tooltip">Debian</span>
         </li>
-        <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
+        <li class="tech-stack-box" data-aos="fade-up">
           <img src="./src/os/ubuntu-logo.png" alt="Ubantu skill" class="tech-stack-logo" />
           <span class="tooltip">Ubantu</span>
         </li>
-         <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
+         <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/os/arch-linux-384.png" alt="Arch Linux skill" class="tech-stack-logo" />
               <span class="tooltip">Arch</span>
           </li>
-          <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700">
+          <li class="tech-stack-box" data-aos="fade-up">
             <img src="./src/os/windows-240.png" alt="Windos skill" class="tech-stack-logo" />
             <span class="tooltip">Windos</span>
         </li>
       </ul>
     </div>
     <div class="frontend-dev-section">
-      <h3 class="frontend-dev-heading scroll-animate scroll-delay-1" tabindex="0"
-        aria-label="Skilled in Cloud Platforms & Web Services">
+      <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
+        aria-label="“Skilled in Cloud Platforms & Web Services”">
         Skilled in Cloud Platforms & Web Services
       </h3>
       <ul class="tech-stack-wrapper"> 
       
-      <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
+      <li class="tech-stack-box" data-aos="fade-up">
      <img src="./src/png/azure-240.png" alt="Azure illustrator skill" class="tech-stack-logo" />
       <span class="tooltip">Azure</span>
       </li>
-      <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
+      <li class="tech-stack-box" data-aos="fade-up">
         <img src="./src/png/google-cloud-240.png" alt="Google Cloud skill" class="tech-stack-logo" />
         <span class="tooltip">Google Cloud</span>
     </li>
-    <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+    <li class="tech-stack-box" data-aos="fade-up">
       <img src="./src/png/aws-240.png" alt="AWS skill" class="tech-stack-logo" />
       <span class="tooltip">AWS</span>
     </li>
       </ul>
       </div>
-
-    <div class="frontend-dev-section">
-      <h3 class="frontend-dev-heading scroll-animate scroll-delay-1" tabindex="0"
-        aria-label="Skilled in Database Technologies">
-        Skilled in Database Technologies
-      </h3>
-      <ul class="tech-stack-wrapper"> 
-      <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
-        <img src="./src/png/mongodb-logo.png" alt="MongoDB skill" class="tech-stack-logo" />
-        <span class="tooltip">MongoDB</span>
-      </li>
-      <li class="tech-stack-box" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
-        <img src="./src/png/supabase-logo.png" alt="Supabase skill" class="tech-stack-logo" />
-        <span class="tooltip">Supabase</span>
-      </li>
-      </ul>
-    </div>
-
+    <!-- skills section ends -->
     <section class="projects-section-container" id="projects">
       <div class="projects-section-div">
         <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article scroll-animate">
+          <h2 class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
             &#60;/Projects&#62;
           </h2>
           <p class="sectionHeadingP"></p>
@@ -462,11 +423,11 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <img src="src/webp/security-96.png" alt="LinuxDroid favicon" class="faviconforProject" />
-                <article class="ProjectHeading scroll-animate">LinuxDroid</article>
-                <article class="ProjectDescription scroll-animate from-right scroll-delay-2">
+                <img src="src/webp/security-96.png" alt="LinuxDroid  favicon" class="faviconforProject" />
+                <article class="ProjectHeading">LinuxDroid</article>
+                <p class="ProjectDescription">
                 The most powerful security toolkit for Android: without rooting your device. Run security tools like Nmap, Metasploit, and Wireshark on your Android device without voiding your warranty. Access a wide range of penetration testing tools and utilities, right from your Android phone or tablet.
-                </article>
+                </p>
                 <div class="project-buttons">
                   <a href="https://github.com/aryanvbw/LinuxDroid" target="_blank" class="github-redirect"
                     aria-label="Visit LinuxDroid on GitHub">
@@ -493,8 +454,8 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
               <div class="info-div">
                 <img src="src/webp/techshoplogo.webp" alt="TEch-Shop website favicon"
                   class="faviconforProject" />
-                <article class="ProjectHeading scroll-animate">TEch-Shop</article>
-                <p class="ProjectDescription scroll-animate from-right scroll-delay-2">
+                <article class="ProjectHeading">TEch-Shop</article>
+                <p class="ProjectDescription">
                 TEch-Shop is an ecommerce website built on wordpress .Your One-Stop Shop for Cyber and Tech Tools!
                 </p>
                 <div class="project-buttons">
@@ -508,19 +469,19 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/techshop.gif" alt=" website preview image not loding" />
+                <img src="src/webp/techshop.webp" alt="comickaze website preview image" />
               </div>
             </div>
           </div>
 
-      
+          <!-- ---------------------- -->
           <div class="project-box-wrapper" data-aos="fade-up">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
                 <img src="src/ico/andro.png" alt="ANDRO website favicon"
                   class="faviconforProject ANDRO" />
-                <article class="ProjectHeading scroll-animate">ANDRO</article>
-                <p class="ProjectDescription scroll-animate from-right scroll-delay-2">
+                <article class="ProjectHeading">ANDRO</article>
+                <p class="ProjectDescription">
                   ANDRO Unleash Mobile Security with our Android Exploitation and Analysis Tool. Identify vulnerabilities, reverse engineer apps, and fortify defenses with ease. Stay ahead of threats and redefine mobile protection today!
                 </p>
                 <div class="project-buttons">
@@ -543,43 +504,14 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
               </div>
             </div>
           </div>
-          
-          <div class="project-box-wrapper" data-aos="fade-up">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/ico/andro.png" alt="ANDRO website favicon"
-                  class="faviconforProject ANDRO" />
-                <article class="ProjectHeading scroll-animate">Andro-CLI</article>
-                <p class="ProjectDescription scroll-animate from-right scroll-delay-2">
-                  Andro-CLI is a sophisticated exploitation framework designed to remotely manage and control Android devices, offering a comprehensive suite of features for information retrieval and device manipulation. Developed with a client-server architecture utilizing Java for the Android client and Python for the server this tool enables seamless remote administration over Android systems. </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/AryanVBW/Andro-CLI" target="_blank" class="github-redirect"
-                    aria-label="Visit ANDRO on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://aryanvbw.github.io/Andro-CLI" target="_blank" class="cta"
-                    aria-label="Visit ANDRO Live">
-                    <span>Overview</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/controlpanel.gif" alt="Aquaregia website preview image" />
-              </div>
-            </div>
-          </div>
-
+          <!-- ---------------------- -->
           <div class="project-box-wrapper" data-aos="fade-up">
             <div class="project-box project-box4" id="project-box4">
               <div class="info-div">
                 <img src="src/ico/exiff.webp" alt="ExifTool website favicon" class="faviconforProject" />
-                <article class="ProjectHeading scroll-animate">Exif</article>
-                <p class="ProjectDescription scroll-animate from-right scroll-delay-2">
-                  ExifTool is a powerful command-line tool that can be used to extract and edit metadata in a wide range of media files, including images, audio, and video. Metadata is information that is stored within a file that describes the file's content or other attributes.
+                <article class="ProjectHeading">Exif</article>
+                <p class="ProjectDescription">
+                  ExifTool is a powerful command-line tool that can be used to extract and edit metadata in a wide range of media files, including images, audio, and video. Metadata is information that is stored within a file that describes the file’s content or other attributes.
                 </p>
                 <div class="project-buttons">
                   <a href="https://github.com/aryanVBW/Exif" target="_blank" class="github-redirect"
@@ -602,13 +534,13 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
             </div>
           </div>
 
-         
+          <!-- ---------------------- -->
           <div class="project-box-wrapper" data-aos="fade-up">
             <div class="project-box project-box3" id="project-box3">
               <div class="info-div">
                 <img src="src/webp/wifiB.png" alt="WIFIjam website favicon" class="faviconforProject" />
-                <article class="ProjectHeading scroll-animate">WIFIjam</article>
-                <p class="ProjectDescription scroll-animate from-right scroll-delay-2">
+                <article class="ProjectHeading">WIFIjam</article>
+                <p class="ProjectDescription">
                   Python WiFi Deauthentication Script! Ready to take control of WiFi networks like a pro? Introducing our Python-based WiFi Deauthentication Script—the ultimate tool for network dominance. Explore vulnerabilities, disconnect devices, and fortify your security.
                 </p>
                 <div class="project-buttons">
@@ -617,7 +549,7 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
                     <img src="src/svg/github.svg" alt="github redirect button" />
                   </a>
                   <a href="https://aryanvbw.github.io/WIFIjam/" target="_blank" class="cta"
-                    aria-label="Visit WIFIjam ">
+                    aria-label="Overview">
                     <span>Overview</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
                       <path d="M1,5 L11,5"></path>
@@ -632,14 +564,14 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
             </div>
           </div>
 
-          
+          <!-- ---------------------- -->
 
           <div class="project-box-wrapper" data-aos="fade-up">
             <div class="project-box project-box1" id="project-box1">
               <div class="info-div">
-                <img src="src/rdpbanner (1).jpg" alt="RDPtown/ website favicon" class="faviconforProject" />
-                <article class="ProjectHeading scroll-animate">RDPtown</article>
-                <p class="ProjectDescription scroll-animate from-right scroll-delay-2">
+                <img src="src/webp/cloud-computing-94.png" alt="RDPtown/ website favicon" class="faviconforProject" />
+                <article class="ProjectHeading">RDPtown</article>
+                <p class="ProjectDescription">
                   Welcome to the magical world of Linxie – your free Linux Remote Desktop (RDP) and virtual computer ! 🎉 These cloud computers are fully managed by Google, so you can be sure they are reliable and secure. You can use them for anything you want.
                 </p>
                 <div class="project-buttons">
@@ -662,12 +594,12 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
               </div>
             </div>
           </div>
-        
+          <!-- ---------------------- -->
         </div>
       </div>
     </section>
   </main>
-  
+  <!-- main ends here -->
 
   <footer id="footer">
     <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
@@ -703,7 +635,7 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
             <a href="https://github.com/AryanVBW" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
                 class="SocialHandle">
                 <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
               </svg></a>
 
             <a href="mailto:vivek.aryanvbw@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
@@ -726,20 +658,18 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
         </div>
         <div class="footer-bottom">
           <article>
-            Design & Built by Vivek Wagdare
+            Design & Built by Vivek W
             &#169;2024
           </article>
         </div>
       </div>
     </div>
   </footer>
-  
+  <!-- footer ends here -->
 
-  <script src="https://raw.githubusercontent.com/AryanVBW/portfolio/main/aos.js"></script>
-  <script src="knowledge-base.js" type="module"></script>
-  <script src="voice-assistant.js" type="module"></script>
   <script src="main.js"></script>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
@@ -764,8 +694,8 @@ The web is my canvas, and my tools are the languages and frameworks that bring l
       cursorInner.style.left = `${posX}px`;
       cursorInner.style.top = `${posY}px`;
 
-     cursorOuter.style.left = `${posX}px`;
-     cursorOuter.style.top = `${posY}px`;
+      // cursorOuter.style.left = `${posX}px`;
+      // cursorOuter.style.top = `${posY}px`;
 
       cursorOuter.animate(
         {
