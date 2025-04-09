@@ -6,7 +6,9 @@ class VoiceAssistant {
         this.messages = [];
         this.speechRecognition = null;
         this.speechSynthesis = window.speechSynthesis;
-        this.geminiApiKey = 'AIzaSyARcx7ZIsYZJNzFr5YPTBQ30QTTw24gsUg'; // Replace with your Gemini API key
+        this.geminiApiKey = process.env.GEMINI_API_KEY || ''; // Use environment variable
+        this.voiceQueue = [];
+        this.isSpeaking = false;
         this.initialize();
     }
 
