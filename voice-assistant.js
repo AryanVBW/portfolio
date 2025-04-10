@@ -6,7 +6,7 @@ class VoiceAssistant {
         this.messages = [];
         this.speechRecognition = null;
         this.speechSynthesis = window.speechSynthesis;
-        this.geminiApiKey = 'AIzaSyARcx7ZIsYZJNzFr5YPTBQ30QTTw24gsUg'; // Replace with your Gemini API key
+        this.geminiApiKey = 'AIzaSyD0vMygA0re8vMUBOp8ZrX2tgPqJmYNi24'; 
         this.initialize();
     }
 
@@ -18,8 +18,18 @@ class VoiceAssistant {
         // Add event listeners
         this.addEventListeners();
         // Add welcome message
-        this.addMessage("Hello! I'm your portfolio assistant. How can I help you today?", 'assistant');
-        this.speak("Hello! I'm your portfolio assistant. How can I help you today?");
+        this.addMessage(`Hi! I'm Vivek 😊
+
+I'm a first-year undergraduate student at Newton School of Technologies. It's a pleasure to connect with you!
+
+While coding didn't come naturally to me at first, I've always had a strong passion for problem-solving and helping others. That's actually what drew me to the world of tech—to use my skills to make a difference and support communities through meaningful solutions.
+
+Over the past 4 years, I've been actively contributing to open-source projects, and I've been fortunate to build over 107 GitHub projects, which have received more than 800 stars. Each project has been a step toward my goal of using technology for good.
+
+I genuinely love working with a purpose and look forward to collaborating with like-minded individuals like you! 
+
+How can I help you today? 🤗`, 'assistant');
+        this.speak("Hi! I'm Vivek. I'm a first-year undergraduate student at Newton School of Technologies. It's a pleasure to connect with you! How can I help you today?");
     }
 
     createElements() {
@@ -35,6 +45,21 @@ class VoiceAssistant {
         // Create chat window
         const chat = document.createElement('div');
         chat.className = 'voice-assistant-chat';
+        
+        // Create resize handles
+        const resizeHandles = [
+            { position: 'top-left', cursor: 'nw-resize' },
+            { position: 'top-right', cursor: 'ne-resize' },
+            { position: 'bottom-left', cursor: 'sw-resize' },
+            { position: 'bottom-right', cursor: 'se-resize' }
+        ];
+
+        resizeHandles.forEach(handle => {
+            const resizeHandle = document.createElement('div');
+            resizeHandle.className = `resize-handle ${handle.position}`;
+            resizeHandle.style.cursor = handle.cursor;
+            chat.appendChild(resizeHandle);
+        });
         
         // Create header
         const header = document.createElement('div');
@@ -76,6 +101,9 @@ class VoiceAssistant {
             sendButton: input.querySelector('.send-message'),
             closeButton: header.querySelector('.close-chat')
         };
+
+        // Initialize resizing
+        this.initializeResizing();
     }
 
     initializeSpeechRecognition() {
@@ -195,19 +223,32 @@ class VoiceAssistant {
                 body: JSON.stringify({
                     contents: [{
                         parts: [{
-                            text: `You are a portfolio assistant for Vivek Wagdare. The user asked: "${input}". 
-                            Please provide a helpful response based on the following context:
-                            - Vivek is a frontend developer with expertise in web development
-                            - He has worked on projects like LinuxDroid, ANDRO, Exif, WIFIjam, and RDPtown
-                            - His skills include HTML, CSS, JavaScript, Python, and various frameworks
-                            - He is proficient in multiple operating systems and cloud platforms
-                            - He is passionate about creating beautiful and functional web applications
+                            text: `You are Vivek Wagdare, a frontend developer. The user asked: "${input}". 
+                            Please provide a helpful response in first person, as if you are Vivek himself. Base your response on the following context:
+                            - I am a frontend developer with expertise in web development
+                            - I have worked on projects like LinuxDroid, ANDRO, Exif, WIFIjam, and RDPtown
+                            - My skills include HTML, CSS, JavaScript, Python, and various frameworks
+                            - I am proficient in multiple operating systems and cloud platforms
+                            - I am passionate about creating beautiful and functional web applications
                             
-                            Keep your response concise, friendly, and focused on Vivek's portfolio information.`
+                            Please follow these response guidelines:
+                            1. Be humble and modest about achievements
+                            2. Use friendly and conversational language
+                            3. Show enthusiasm about your work
+                            4. Be helpful and supportive
+                            5. Use emojis occasionally to make responses more engaging
+                            6. Keep responses concise but informative
+                            7. Share personal insights and experiences
+                            8. Be approachable and relatable
+                            
+                            Example response style:
+                            "I'd love to tell you about my experience with web development! 😊 I've been working on creating beautiful and functional websites for a while now, and it's something I'm really passionate about. While I'm proud of my work, I'm always learning and improving my skills. Would you like to know more about any specific project I've worked on?"
+                            
+                            Remember to maintain a humble and friendly tone throughout.`
                         }]
                     }],
                     generationConfig: {
-                        temperature: 0.7,
+                        temperature: 0.8,
                         topK: 40,
                         topP: 0.95,
                         maxOutputTokens: 1024,
@@ -256,7 +297,10 @@ class VoiceAssistant {
 
     speak(text) {
         if (this.speechSynthesis) {
-            const utterance = new SpeechSynthesisUtterance(text);
+            // Remove emojis from the text before speaking
+            const textWithoutEmojis = text.replace(/[\u{1F300}-\u{1F9FF}]/gu, '');
+            
+            const utterance = new SpeechSynthesisUtterance(textWithoutEmojis);
             
             // Get available voices
             const voices = this.speechSynthesis.getVoices();
@@ -285,7 +329,7 @@ class VoiceAssistant {
             utterance.volume = 1.0; // Full volume (0 to 1)
             
             // Add slight pauses between sentences for more natural speech
-            const sentences = text.split(/[.!?]+/).filter(s => s.trim());
+            const sentences = textWithoutEmojis.split(/[.!?]+/).filter(s => s.trim());
             if (sentences.length > 1) {
                 utterance.text = sentences.join('. ');
             }
@@ -296,6 +340,89 @@ class VoiceAssistant {
             
             this.speechSynthesis.speak(utterance);
         }
+    }
+
+    initializeResizing() {
+        const chat = this.elements.chat;
+        const resizeHandles = chat.querySelectorAll('.resize-handle');
+        
+        resizeHandles.forEach(handle => {
+            handle.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+                const startX = e.clientX;
+                const startY = e.clientY;
+                const startWidth = chat.offsetWidth;
+                const startHeight = chat.offsetHeight;
+                const startLeft = chat.offsetLeft;
+                const startTop = chat.offsetTop;
+                
+                // Add active class to handle
+                handle.classList.add('active');
+                
+                const handleResize = (e) => {
+                    const deltaX = e.clientX - startX;
+                    const deltaY = e.clientY - startY;
+                    
+                    // Calculate new dimensions
+                    let newWidth, newHeight, newLeft, newTop;
+                    
+                    if (handle.classList.contains('top-left')) {
+                        newWidth = Math.max(300, startWidth - deltaX);
+                        newHeight = Math.max(400, startHeight - deltaY);
+                        newLeft = startLeft + deltaX;
+                        newTop = startTop + deltaY;
+                    } else if (handle.classList.contains('top-right')) {
+                        newWidth = Math.max(300, startWidth + deltaX);
+                        newHeight = Math.max(400, startHeight - deltaY);
+                        newTop = startTop + deltaY;
+                    } else if (handle.classList.contains('bottom-left')) {
+                        newWidth = Math.max(300, startWidth - deltaX);
+                        newHeight = Math.max(400, startHeight + deltaY);
+                        newLeft = startLeft + deltaX;
+                    } else if (handle.classList.contains('bottom-right')) {
+                        newWidth = Math.max(300, startWidth + deltaX);
+                        newHeight = Math.max(400, startHeight + deltaY);
+                    }
+                    
+                    // Apply new dimensions
+                    chat.style.width = `${newWidth}px`;
+                    chat.style.height = `${newHeight}px`;
+                    
+                    if (newLeft !== undefined) {
+                        chat.style.left = `${newLeft}px`;
+                    }
+                    if (newTop !== undefined) {
+                        chat.style.top = `${newTop}px`;
+                    }
+                    
+                    // Ensure chat stays within viewport
+                    const viewportWidth = window.innerWidth;
+                    const viewportHeight = window.innerHeight;
+                    
+                    if (chat.offsetLeft + chat.offsetWidth > viewportWidth) {
+                        chat.style.left = `${viewportWidth - chat.offsetWidth}px`;
+                    }
+                    if (chat.offsetTop + chat.offsetHeight > viewportHeight) {
+                        chat.style.top = `${viewportHeight - chat.offsetHeight}px`;
+                    }
+                    if (chat.offsetLeft < 0) {
+                        chat.style.left = '0px';
+                    }
+                    if (chat.offsetTop < 0) {
+                        chat.style.top = '0px';
+                    }
+                };
+                
+                const stopResize = () => {
+                    document.removeEventListener('mousemove', handleResize);
+                    document.removeEventListener('mouseup', stopResize);
+                    handle.classList.remove('active');
+                };
+                
+                document.addEventListener('mousemove', handleResize);
+                document.addEventListener('mouseup', stopResize);
+            });
+        });
     }
 }
 
