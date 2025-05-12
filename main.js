@@ -71,3 +71,75 @@ document.addEventListener('mouseenter', () => {
   cursorInner.style.opacity = '1';
   cursorOuter.style.opacity = '1';
 });
+
+// Boot Animation
+function createParticles() {
+  const particlesContainer = document.querySelector('.boot-particles');
+  const particleCount = 30; // Reduced from 80 to 30
+
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    
+    // Random position
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    
+    // Random delay
+    particle.style.animationDelay = Math.random() * 2 + 's';
+    
+    // Fixed size for better performance
+    particle.style.width = '3px';
+    particle.style.height = '3px';
+    
+    particlesContainer.appendChild(particle);
+  }
+}
+
+function updateStatusMessages() {
+  const statusElement = document.querySelector('.boot-status');
+  const messages = [
+    "Loading...",
+    "Almost there...",
+    "Ready!"
+  ];
+  
+  let currentIndex = 0;
+  
+  const interval = setInterval(() => {
+    statusElement.style.opacity = '0';
+    
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % messages.length;
+      statusElement.textContent = messages[currentIndex];
+      statusElement.style.opacity = '1';
+    }, 300);
+  }, 1000);
+  
+  return interval;
+}
+
+function initBootAnimation() {
+  createParticles();
+  const statusInterval = updateStatusMessages();
+  
+  // Remove boot animation after it completes
+  setTimeout(() => {
+    clearInterval(statusInterval);
+    const bootAnimation = document.querySelector('.boot-animation');
+    bootAnimation.style.opacity = '0';
+    setTimeout(() => {
+      bootAnimation.remove();
+    }, 500);
+  }, 2000); // Reduced from 3000ms to 2000ms
+}
+
+// Initialize boot animation when DOM is loaded
+document.addEventListener('DOMContentLoaded', initBootAnimation);
+
+// Ensure boot animation doesn't block clicks
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.body.classList.remove('boot-animation');
+  }, 2000);
+});
